@@ -6,10 +6,12 @@ RUN yum -y install createrepo
 RUN mkdir /yumload
 RUN createrepo yumload
 RUN yum -y install httpd
-RUN ln -s /var/www/html/yumload /yumload
+RUN ln -s /yumload /var/www/html/yumload
+echo $'service httpd start\n\
+'\
+>> /root/.bashrc
 RUN echo $'[mylocalrepo]\n\
 baseurl=http://0.0.0.0/yumload\n\
 gpgcheck=0\n\
 '\ 
 >> /etc/yum.repos.d/local.repo
-
