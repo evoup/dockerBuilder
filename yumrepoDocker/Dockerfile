@@ -7,7 +7,7 @@ RUN mkdir /yumload
 RUN createrepo yumload
 RUN yum -y install httpd
 RUN ln -s /yumload /var/www/html/yumload
-echo $'service httpd start\n\
+RUN echo $'service httpd start\n\
 '\
 >> /root/.bashrc
 RUN echo $'[mylocalrepo]\n\
