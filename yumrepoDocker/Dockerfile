@@ -4,7 +4,7 @@ RUN yum -y install epel-release
 RUN yum -y update
 RUN yum -y install createrepo
 RUN mkdir /yumload
-createrepo yumload
+RUN createrepo yumload
 RUN yum -y install httpd
 RUN ln -s /var/www/html/yumload /yumload
 RUN echo $'[mylocalrepo]\n\
