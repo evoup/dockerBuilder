@@ -40,3 +40,4 @@ RUN yum -y install hadoop-0.20-mapreduce-tasktracker hadoop-hdfs-datanode
 RUN yum clean all
 RUN yum -y install hadoop-client
 RUN yum -y install hadoop-lzo-cdh4
+RUN yum -y install hadoop-hdfs-fuse 
