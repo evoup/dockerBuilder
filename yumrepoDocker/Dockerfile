@@ -11,6 +11,7 @@ RUN echo $'service httpd start\n\
 '\
 >> /root/.bashrc
 RUN echo $'[mylocalrepo]\n\
+name=Local CentOS Repo\n\
 baseurl=http://0.0.0.0/yumload\n\
 gpgcheck=0\n\
 '\ 
