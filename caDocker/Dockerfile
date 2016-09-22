@@ -7,7 +7,8 @@
 ############################################################
 # Set the base image to Centos
 
-FROM centos:centos6
+#FROM centos:centos6
+FROM evoup/centos_ssh_root_jdk
 MAINTAINER evoup
 RUN echo $'172.18.0.32 hadoop.ca.evoup.com\n\
 '\
