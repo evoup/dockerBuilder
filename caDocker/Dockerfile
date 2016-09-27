@@ -20,7 +20,7 @@ baseurl=http://archive.cloudera.com/cdh4/redhat/6/x86_64/cdh/4/\n\
 gpgkey = http://archive.cloudera.com/cdh4/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera \n\
 gpgcheck = 1 \n\
 '\
->> /etc/yum.repos.d/cloudera-cdh4.repo
+> /etc/yum.repos.d/cloudera-cdh4.repo
 RUN echo $'[cloudera-gplextras4]\n\
 # Packages for Cloudera\'s Distribution for Hadoop, Version 4, on RedHator CentOS 6 x86_64\n\
 name=Cloudera\'s Distribution for Hadoop, Version 4\n\
@@ -28,7 +28,7 @@ baseurl=http://archive.cloudera.com/gplextras/redhat/6/x86_64/gplextras/4/\n\
 gpgkey = http://archive.cloudera.com/gplextras/redhat/6/x86_64/gplextras/RPM-GPG-KEY-cloudera\n\
 gpgcheck = 1\n\
 '\
->> /etc/yum.repos.d/cloudera-gplextras4.repo
+> /etc/yum.repos.d/cloudera-gplextras4.repo
 RUN yum install -y epel-release
 RUN yum -y update
 RUN rpm --import http://archive.cloudera.com/cdh4/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera
